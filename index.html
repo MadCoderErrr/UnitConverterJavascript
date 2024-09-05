@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit Converter</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main-container">
+            <h1 id="header">Unit Converter</h1>
+            <div id="unitButtons">
+                <button id="length-btn" class="unit-btn length-btn-class active-btn">length</button>
+                <button id="weight-btn" class="unit-btn weight-btn-class">weight</button>
+                <button id="time-btn" class="unit-btn">time</button>
+                <button id="temperature-btn" class="unit-btn">temperature</button>
+            </div>
+            <div id="container-of-conversion">
+                <div id="from-unit">
+                    <h1>From:</h1>
+                    <input type="number" id="input-from">
+                    <div class="length-units from active-units" id="fromLength"> <!--Length-->
+                        <input type="button" class="length-unit-btn-f" id="meter-f" value="Meter"> <!--active-unit-btn-f-->
+                        <input type="button" class="length-unit-btn-f" value="Kilometer">
+                        <input type="button" class="length-unit-btn-f" value="Centimeter">
+                        <input type="button" class="length-unit-btn-f" value="Millimeter">
+                        <input type="button" class="length-unit-btn-f" value="Micrometer">
+                        <input type="button" class="length-unit-btn-f" value="Nanometer">
+                        <input type="button" class="length-unit-btn-f" value="Mile">
+                        <input type="button" class="length-unit-btn-f" value="Yard">
+                        <input type="button" class="length-unit-btn-f" value="Foot">
+                        <input type="button" class="length-unit-btn-f" value="Inch">
+                    </div>
+                    <div class="weight-units from" id="fromWeight"> <!--Weight-->
+                        <input type="button" class="weight-unit-btn-f" value="Kilogram"> <!--active-unit-btn-f-->
+                        <input type="button" class="weight-unit-btn-f" value="Gram">
+                        <input type="button" class="weight-unit-btn-f" value="Milligram">
+                        <input type="button" class="weight-unit-btn-f" value="Metric Ton">
+                        <input type="button" class="weight-unit-btn-f" value="Long Ton">
+                        <input type="button" class="weight-unit-btn-f" value="Short Ton">
+                        <input type="button" class="weight-unit-btn-f" value="Pound">
+                        <input type="button" class="weight-unit-btn-f" value="Ounce">
+                        <input type="button" class="weight-unit-btn-f" value="Stone">
+                    </div>
+                    <div class="time-units from" id="fromTime"> <!--Time-->
+                        <input type="button" class="time-unit-btn-f" value="Second"> <!--active-unit-btn-f-->
+                        <input type="button" class="time-unit-btn-f" value="Millisecond">
+                        <input type="button" class="time-unit-btn-f" value="Microsecond">
+                        <input type="button" class="time-unit-btn-f" value="Nanosecond">
+                        <input type="button" class="time-unit-btn-f" value="Picosecond">
+                        <input type="button" class="time-unit-btn-f" value="Minute">
+                        <input type="button" class="time-unit-btn-f" value="Hour">
+                        <input type="button" class="time-unit-btn-f" value="Day">
+                        <input type="button" class="time-unit-btn-f" value="Week">
+                        <input type="button" class="time-unit-btn-f" value="Month">
+                        <input type="button" class="time-unit-btn-f" value="Year">
+                    </div>
+                    <div class="temperature-units from" id="fromTemperature"> <!--Temperature-->
+                        <input type="button" class="temperature-unit-btn-f" value="Celsius"> <!--active-unit-btn-f-->
+                        <input type="button" class="temperature-unit-btn-f" value="Kelvin">
+                        <input type="button" class="temperature-unit-btn-f" value="Farenheit">
+                    </div>
+                </div>
+                <div id="to-unit">
+                    <h1>To:</h1>
+                    <input type="number" id="result-to"> <!--Length-->
+                    <div class="length-units to active-units" id="toLength">
+                        <input type="button" class="length-unit-btn-t" id="meter-t" value="Meter">
+                        <input type="button" class="length-unit-btn-t" value="Kilometer">
+                        <input type="button" class="length-unit-btn-t" value="Centimeter">
+                        <input type="button" class="length-unit-btn-t" value="Millimeter">
+                        <input type="button" class="length-unit-btn-t" value="Micrometer">
+                        <input type="button" class="length-unit-btn-t" value="Nanometer">
+                        <input type="button" class="length-unit-btn-t" value="Mile">
+                        <input type="button" class="length-unit-btn-t" value="Yard">
+                        <input type="button" class="length-unit-btn-t" value="Foot">
+                        <input type="button" class="length-unit-btn-t" value="Inch">
+                    </div>
+                    <div class="weight-units to" id="toWeight"> <!--Weight-->
+                        <input type="button" class="weight-unit-btn-t" id="meter-t" value="Kilogram">
+                        <input type="button" class="weight-unit-btn-t" value="Gram">
+                        <input type="button" class="weight-unit-btn-t" value="Milligram">
+                        <input type="button" class="weight-unit-btn-t" value="Metric Ton">
+                        <input type="button" class="weight-unit-btn-t" value="Long Ton">
+                        <input type="button" class="weight-unit-btn-t" value="Short Ton">
+                        <input type="button" class="weight-unit-btn-t" value="Pound">
+                        <input type="button" class="weight-unit-btn-t" value="Ounce">
+                        <input type="button" class="weight-unit-btn-t" value="Stone">
+                    </div>
+                    <div class="time-units to" id="toTime"> <!--Time-->
+                        <input type="button" class="time-unit-btn-t" value="Second"> <!--active-unit-btn-f-->
+                        <input type="button" class="time-unit-btn-t" value="Millisecond">
+                        <input type="button" class="time-unit-btn-t" value="Microsecond">
+                        <input type="button" class="time-unit-btn-t" value="Nanosecond">
+                        <input type="button" class="time-unit-btn-t" value="Picosecond">
+                        <input type="button" class="time-unit-btn-t" value="Minute">
+                        <input type="button" class="time-unit-btn-t" value="Hour">
+                        <input type="button" class="time-unit-btn-t" value="Day">
+                        <input type="button" class="time-unit-btn-t" value="Week">
+                        <input type="button" class="time-unit-btn-t" value="Month">
+                        <input type="button" class="time-unit-btn-t" value="Year">
+                    </div>
+                    <div class="temperature-units to" id="toTemperature"> <!--Temperature-->
+                        <input type="button" class="temperature-unit-btn-t" value="Celsius"> <!--active-unit-btn-f-->
+                        <input type="button" class="temperature-unit-btn-t" value="Kelvin">
+                        <input type="button" class="temperature-unit-btn-t" value="Farenheit">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="style.js"></script>
+    </body>
+</html>

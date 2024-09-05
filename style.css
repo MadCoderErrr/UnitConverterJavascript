@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #383D46;
+    font-family: 'Roboto Mono';
+    font-size: 22px;
+}
+
+#main-container{
+    margin: 30px 40px;
+}
+
+#header{
+    color: #BEC8F1;
+}
+
+#unitButtons{
+    display: flex;
+    margin: 40px 8px 8px 10px;
+}
+
+#unitButtons button{
+    background-color: #BEC8F1;
+    color: #4D4B5F;
+    border: none;
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 5px 15px;
+    font-family: 'Roboto Mono';
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#unitButtons button:hover{
+    color: #BEC8F1;
+    background-color: #4D4B5F;
+    width: auto;
+}
+
+#unitButtons .active-btn{
+    color: #BEC8F1;
+    background-color: #4D4B5F;
+}
+
+#container-of-conversion{
+    background-color: #4D4B5F;
+    width: auto;
+    height: 500px;
+    margin: 10px 10px 0px 10px;
+    display: flex;
+    justify-content: space-around;
+    color: #BEC8F1;
+    padding: 10px 40px;
+    position: relative;
+}
+
+#from-unit{
+    text-align: center;
+}
+
+#to-unit{
+    text-align: center;
+}
+
+input{
+    background-color: #4D4B5F;
+    border: 1px solid #BEC8F1;
+    padding: 10px 15px;
+    color: #BEC8F1;
+    font-weight: 500;
+    width: 80%;
+    position: relative;
+}
+
+.from{
+    display: none;
+}
+
+.to{
+    display: none;
+}
+.from.active-units, .to.active-units{
+    margin: 20px auto 0px auto;
+    display: inline-block;
+    height: 250px;
+    width: 80%;
+    overflow: auto;
+    border: 1px solid #BEC8F1;
+    position: relative;
+}
+
+.active-units{
+    color: #BEC8F1;
+}
+
+.active-units input{
+    display: block;
+    width: 100%;
+    background-color: #4D4B5F;
+    border: 1px solid #4D4B5F;
+    padding: 5px 0px;
+    color: #BEC8F1;
+    position: relative;
+}
+
+.active-units input:hover{
+    border: 1px solid #BEC8F1;
+}
+
+.active-units .active-unit-btn-f, .active-units .active-unit-btn-t{
+    border: 1px solid #BEC8F1;
+    color: #4D4B5F;
+    background-color: #BEC8F1;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        text-align: center;
+    }
+    #header {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    #container-of-conversion {
+        width: auto;
+        height: 50%;
+        display: block;
+    }
+    #unitButtons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4px 7px;
+        width:fit-content;
+    }
+    .from.active-units, .to.active-units{
+        margin: 10px;
+        display: inline-block;
+        height: 250px;
+        overflow: auto;
+        border: 1px solid #BEC8F1;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #unitButtons button{
+        margin: 4px 4px;
+        padding: 3px 5px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    #input-from, #result-to{
+        background-color: #4D4B5F;
+        border: 1px solid #BEC8F1;
+        padding: 10px 15px;
+        color: #BEC8F1;
+        font-weight: 500;
+        width: 50%;
+        position: relative;
+    }
+}
